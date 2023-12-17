@@ -55,9 +55,13 @@ function weeklySaving() {
         console.error('Error during fetch operation:', error);
 
         // Log the response text for further investigation
-        response.text().then(text => console.error('Response Text:', text));
+        fetch(url + '/api/weeklysaving')  // Make a new request to get the response
+            .then(response => response.text())
+            .then(text => console.error('Response Text:', text))
+            .catch(innerError => console.error('Error fetching response text:', innerError));
     });
 }
+
 
 
 function weeklySpending() {
