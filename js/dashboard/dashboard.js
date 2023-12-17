@@ -27,9 +27,8 @@ loadUserIncomes();
 dailyIncome();
 dailySpending();
 dailySaving();
-
+weeklyIncome();
 weeklySpending();
-weeklySaving();
 
 
 
