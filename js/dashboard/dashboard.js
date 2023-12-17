@@ -1,4 +1,4 @@
-import { url, setRouter } from "../router/router.js";
+import { setRouter, url } from "../router/router.js";
 
 setRouter();
 
@@ -13,7 +13,7 @@ logout.onclick = async () => {
     });
     if (response.ok) {
         localStorage.clear();
-        window.location.href = "/index.html";
+        window.location.href = "/mt-frontend/index.html";
 
     } else {
         const json = await response.json();
