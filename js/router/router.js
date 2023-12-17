@@ -2,22 +2,22 @@ function setRouter() {
     const path = window.location.pathname;
 
     switch (path) {
-        case "/register.html":
+        case "register.html":
 
-        case "/index.html":
+        case "index.html":
 
-        case "/forget-password.html":
+        case "forget-password.html":
                 if (localStorage.getItem("token")) {
                     window.location.pathname = "dashboard.html";
                 }
                 break;    
 
-        case "/dashboard.html":
-        case "/budget.html":
-        case "/expenses.html":
-        case "/summary.html":
+        case "dashboard.html":
+        case "budget.html":
+        case "expenses.html":
+        case "summary.html":
             if (localStorage.getItem("token") == null) {
-                window.location.pathname = "/index.html";
+                window.location.pathname = "index.html";
             }
             break;
          
