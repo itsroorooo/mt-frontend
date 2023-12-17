@@ -9,6 +9,7 @@ logout.onclick = async () => {
         headers: {
             Accept: "application/json",
             Authorization: "Bearer " + localStorage.getItem("token"),
+            'ngrok-skip-browser-warning': 'any'
         },
     });
     if (response.ok) {
@@ -45,6 +46,7 @@ function saveEditedBudget(budgetId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
 
@@ -128,6 +130,7 @@ add.onclick = async () => {
         headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
             Accept: 'application/json',
+            'ngrok-skip-browser-warning': 'any'
         },
     })
     .then(response => response.json())
@@ -214,6 +217,7 @@ function openEditModal(budgetId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -339,6 +343,7 @@ function deleteBudget(budget_id) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -362,6 +367,7 @@ function loadUserBudgets() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {

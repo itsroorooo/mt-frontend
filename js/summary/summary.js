@@ -8,6 +8,7 @@ logout.onclick = async () => {
         headers: {
             Accept: "application/json",
             Authorization: "Bearer " + localStorage.getItem("token"),
+            'ngrok-skip-browser-warning': 'any'
         },
     });
     if (response.ok) {
@@ -34,6 +35,7 @@ fetch( url+ '/api/barchart', {
         headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
             Accept: 'application/json',
+            'ngrok-skip-browser-warning': 'any'
         },
     })
     .then(response => {
@@ -66,6 +68,7 @@ function utilExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -89,6 +92,7 @@ function transExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -112,6 +116,7 @@ function shopExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -135,6 +140,7 @@ function miscExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -158,6 +164,7 @@ function heathExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -181,6 +188,7 @@ function foodExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -204,6 +212,7 @@ function entExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -227,6 +236,7 @@ function educExpenses() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {

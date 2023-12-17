@@ -9,6 +9,7 @@ logout.onclick = async () => {
         headers: {
             Accept: "application/json",
             Authorization: "Bearer " + localStorage.getItem("token"),
+            'ngrok-skip-browser-warning': 'any'
         },
     });
     if (response.ok) {
@@ -51,6 +52,7 @@ function saveEditExpenses(expensesId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
 
@@ -145,6 +147,7 @@ function deleteExpenses(expenses_id) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -179,6 +182,7 @@ add.onclick = async () => {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
 
@@ -241,6 +245,7 @@ function openExpensesModal(expensesId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -340,6 +345,7 @@ function openExpensesModal(expensesId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
