@@ -1,4 +1,4 @@
-import { url, setRouter } from "../router";
+import { url, setRouter } from "../mt-frontend/js/router/router.js";
 
 setRouter();
 
