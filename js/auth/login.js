@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             loginForm.reset();
 
-            window.location.href = "/dashboard.html";
+            window.location.href = "dashboard.html";
 
         } else if (response.status == 422) {
             const json = await response.json();
