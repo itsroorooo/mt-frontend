@@ -1,5 +1,5 @@
 
-import { url } from "/js/router/router.js";
+import { url, setRouter } from "../router/router.js";
 
 const logout = document.getElementById("logout");
 

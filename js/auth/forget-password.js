@@ -1,4 +1,4 @@
-import { url, setRouter } from "/js/router/router.js";
+import { url, setRouter } from "../router/router.js";
 
 setRouter();
 
