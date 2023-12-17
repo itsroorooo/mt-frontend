@@ -65,6 +65,7 @@ function weeklySpending() {
             headers: {
                 Accept: 'application/json',
                 Authorization: "Bearer " + localStorage.getItem("token"),
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -88,6 +89,7 @@ function weeklyIncome() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -112,6 +114,7 @@ function dailySaving() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -135,6 +138,7 @@ function dailySpending() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -158,6 +162,7 @@ function dailyIncome() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -197,6 +202,7 @@ function saveEditExpenses(incomeId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
 
@@ -292,6 +298,7 @@ function deleteExpenses(incomeId) {
         headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
             Accept: 'application/json',
+            'ngrok-skip-browser-warning': 'any'
         },
     })
     .then(response => {
@@ -317,6 +324,7 @@ function openExpensesModal(incomeId) {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
@@ -470,6 +478,7 @@ function loadUserIncomes() {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
                 Accept: 'application/json',
+                'ngrok-skip-browser-warning': 'any'
             },
         })
         .then(response => {
