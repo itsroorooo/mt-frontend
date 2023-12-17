@@ -4,7 +4,7 @@ function setRouter() {
     switch (path) {
         case "/register.html":
 
-        case "/login.html":
+        case "/index.html":
 
         case "/forget-password.html":
                 if (localStorage.getItem("token")) {
@@ -17,7 +17,7 @@ function setRouter() {
         case "/expenses.html":
         case "/summary.html":
             if (localStorage.getItem("token") == null) {
-                window.location.pathname = "/login.html";
+                window.location.pathname = "/index.html";
             }
             break;
          
@@ -27,7 +27,7 @@ function setRouter() {
     }
 }
 
-const url = "http://moneytracker-backend.test";
+const url = "https://066b-216-247-59-244.ngrok-free.app/moneytracker-backend/public";
 
 export { url, setRouter };
 

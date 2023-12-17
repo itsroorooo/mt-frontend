@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             registrationForm.reset();
 
             setTimeout(() => {
-                window.location.href = "login.html";
+                window.location.href = "index.html";
             }, 2000);
         } else if (response.status == 422) {
             const json = await response.json();
