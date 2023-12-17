@@ -34,27 +34,31 @@ weeklySaving();
 
 
 function weeklySaving() {
-    fetch(url+ '/api/weeklysaving', {
-            method: 'GET',
-            headers: {
-                Accept: 'application/json',
-                Authorization: "Bearer " + localStorage.getItem("token"),
-            },
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            document.querySelector('.weeklysavingcontainer').innerHTML =
-                `<h2 class="fw-bold">&#8369;${data.weeklySaving}</h2>`;
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
+    fetch(url + '/api/weeklysaving', {
+        method: 'GET',
+        headers: {
+            Accept: 'application/json',
+            Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.querySelector('.weeklysavingcontainer').innerHTML =
+            `<h2 class="fw-bold">&#8369;${data.weeklySaving}</h2>`;
+    })
+    .catch(error => {
+        console.error('Error during fetch operation:', error);
+
+        // Log the response text for further investigation
+        response.text().then(text => console.error('Response Text:', text));
+    });
 }
+
 
 function weeklySpending() {
     fetch(url+ '/api/weeklyspending', {
