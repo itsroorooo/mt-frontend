@@ -1,4 +1,4 @@
-import { url, setRouter } from "../router/router.js";
+import { setRouter, url } from "../router/router.js";
 
 setRouter();
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             loginForm.reset();
 
-            window.location.href = "dashboard.html";
+            window.location.href = "/mt-frontend/dashboard.html";
 
         } else if (response.status == 422) {
             const json = await response.json();
