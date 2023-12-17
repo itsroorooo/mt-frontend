@@ -8,7 +8,7 @@ function setRouter() {
 
         case "/forget-password.html":
                 if (localStorage.getItem("token")) {
-                    window.location.pathname = "/dashboard.html";
+                    window.location.pathname = "dashboard.html";
                 }
                 break;    
 
