@@ -354,21 +354,21 @@ function deleteBudget(budget_id) {
         })
         .then(data => {
             console.log(data.message);
-            const successMessage = document.getElementById('successMessage');
-            if (successMessage) {
-                successMessage.textContent = 'Successfully Deleted!';
-            }
+             const successMessage = document.getElementById('successMessage');
+                if (successMessage) {
+                    successMessage.textContent = 'Successfully Deleted!';
+                }
 
-            $('#sucessModal').modal({
-                backdrop: false,
-                show: true
-            });
+                $('#sucessModal').modal({
+                    backdrop: false,
+                    show: true
+                });
 
-            $('#editModal').modal('hide');
+                $('#editModal').modal('hide');
 
-            setTimeout(() => {
-                $('#sucessModal').modal('hide');
-            }, 2000);
+                setTimeout(() => {
+                    $('#sucessModal').modal('hide');
+                }, 2000);
             loadUserBudgets();
         })
         .catch(error => {
