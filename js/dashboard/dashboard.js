@@ -309,6 +309,21 @@ function deleteExpenses(incomeId) {
     })
     .then(data => {
         console.log(data.message);
+        const successMessage = document.getElementById('successMessage');
+        if (successMessage) {
+            successMessage.textContent = 'Successfully Deleted!';
+        }
+
+        $('#sucessModal').modal({
+            backdrop: false,
+            show: true
+        });
+
+        $('#editModal').modal('hide');
+
+        setTimeout(() => {
+            $('#sucessModal').modal('hide');
+        }, 2000);
         loadUserIncomes();
     })
     .catch(error => {
