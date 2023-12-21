@@ -376,7 +376,7 @@ function openExpensesModal(expensesId) {
                 const row = document.createElement('div');
                 row.classList.add('row', 'pt-3', 'pb-2');
                 row.innerHTML = `
-
+                
                 <h4 class="col text-center">${expenses.category}</h4>
                 <h4 class="col grey text-center text-break">${ucfirst(expenses.type)}</h4>
                 <h4 class="col text-center text-break">&#8369;${expenses.amount}</h4>
