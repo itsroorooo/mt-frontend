@@ -511,7 +511,7 @@ function loadUserIncomes() {
                 const row = document.createElement('div');
                  
                 row.innerHTML = `
-                <div class="row rowAl pt-3">
+                <div class="row rowAl pt-2">
                 <div class="col text-center">
                     <h4>${incomes.type}</h4>
                 </div>
