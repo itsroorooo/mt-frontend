@@ -377,29 +377,29 @@ function openExpensesModal(expensesId) {
                 row.classList.add('row', 'pt-3', 'pb-2');
                 row.innerHTML = `
 
-                        <h4 class="col text-center">${expenses.category}</h4>
-                        <h4 class="col grey text-center text-break">${ucfirst(expenses.type)} </h4>
-                        <h4 class="col text-center text-break">&#8369;${expenses.amount}</h4>
-                        <h4 class="col grey text-end">${expenses.date}</h4>
-                        <div class="col text-center justify-content-center d-flex">
-                            <div class="dropdown pt-1">
-                                <button style="color: #80AC64; border:1px solid #80AC64; background: #F1F1F1;"
-                                    class="btn dropdown-toggle butdrop d-flex float-end" type="button"
-                                    id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"></button>
+                <h4 class="col text-center">${expenses.category}</h4>
+                <h4 class="col grey text-center text-break">${ucfirst(expenses.type)}</h4>
+                <h4 class="col text-center text-break">&#8369;${expenses.amount}</h4>
+                <h4 class="col grey text-end">${expenses.date}</h4>
+                <div class="col text-center justify-content-center d-flex">
+                    <div class="dropdown pt-1">
+                        <button style="color: #80AC64; border:1px solid #80AC64; background: #F1F1F1;"
+                            class="btn dropdown-toggle butdrop d-flex float-end" type="button"
+                            id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"></button>
 
-                                <div style="background:#ECFAE2;border: 1px solid black;border-radius: 10px;"
-                                    class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <button style="border-bottom: 1px solid black; text-align: center;"
-                                        class="dropdown-item" id="butEdit_${expenses.expenses_id}" type="button"
-                                        >Edit
-                                    </button>
-                                    <button class="dropdown-item" style="text-align: center; name="delete"
-                                        id="deleteButton_${expenses.expenses_id}"
-                                        >Delete</button>
-                                </div>
-                            </div>
+                        <div style="background:#ECFAE2;border: 1px solid black;border-radius: 10px;"
+                            class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button style="border-bottom: 1px solid black; text-align: center;"
+                                class="dropdown-item" id="butEdit" type="button"
+                                onclick="openExpensesModal(${expenses.expenses_id})">Edit
+                            </button>
+                            <button class="dropdown-item" style="text-align: center; name="delete"
+                                data-expenses-id="${expenses.expenses_id}"
+                                onclick="deleteExpenses(this)">Delete</button>
                         </div>
+                    </div>
+                </div>
                    `;
                 document.querySelector('.scrollbar').appendChild(row);
             });
