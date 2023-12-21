@@ -356,7 +356,7 @@ function deleteBudget(budget_id) {
             console.log(data.message);
             const successMessage = document.getElementById('successMessage');
             if (successMessage) {
-                successMessage.textContent = 'Successfully Added!';
+                successMessage.textContent = 'Successfully Deleted!';
             }
 
             $('#sucessModal').modal({

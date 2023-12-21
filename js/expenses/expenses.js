@@ -160,7 +160,7 @@ function deleteExpenses(expenses_id) {
             console.log(data.message);
             const successMessage = document.getElementById('successMessage');
             if (successMessage) {
-                successMessage.textContent = 'Successfully Added!';
+                successMessage.textContent = 'Successfully Deleted!';
             }
 
             $('#sucessModal').modal({
