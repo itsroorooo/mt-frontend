@@ -7,6 +7,10 @@ function setRouter() {
         case "/mt-frontend/index.html":
 
         case "/mt-frontend/forget-password.html":
+
+                case "/mt-frontend/reset-password.html":
+
+        case "/mt-frontend/forget-password.html":
                 if (localStorage.getItem("token")) {
                     window.location.pathname = "/mt-frontend/dashboard.html";
                 }
@@ -27,7 +31,7 @@ function setRouter() {
     }
 }
 
-const url = "https://066b-216-247-59-244.ngrok-free.app/moneytracker-backend/public";
+const url = "http://moneytracker-backend.test";
 
 export { setRouter, url };
 
