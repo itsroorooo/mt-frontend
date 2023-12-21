@@ -512,36 +512,39 @@ function loadUserIncomes() {
                  
                 row.innerHTML = `
                 <div class="row rowAl pt-2">
-                <div class="col text-center">
-                    <h4>${incomes.type}</h4>
-                </div>
-                <div class="col grey text-center">
-                    <h4>&#8369;${incomes.amount}</h4>
-                </div>
-                <div class="col text-center">
-                    <h4>${incomes.date}</h4>
-                </div>
-                <div class="col">
-                    <div class="dropdown d-flex justify-content-center pt-2">
-                        <button
-                            style="color: #80AC64; border:1px solid #80AC64; background: #F1F1F1;"
-                            class="btn dropdown-toggle butdrop d-flex float-end" type="button"
-                            id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"></button>
+                                    <div class="col text-center">
+                                        <h4>${incomes.type} ${incomes.income_id}</h4>
+                                    </div>
+                                    <div class="col grey text-center">
+                                        <h4>&#8369;${incomes.amount}</h4>
+                                    </div>
+                                    <div class="col text-center">
 
-                        <div style="background:#ECFAE2;border: 1px solid black;border-radius: 10px;"
-                            class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button style="border-bottom: 1px solid black; text-align: center;"
-                                class="dropdown-item" id="butEdit" type="button"
-                                data-id="${incomes.income_id}"
-                                onclick="openExpensesModal(${incomes.income_id})">Edit
-                            </button>
-                            <button class="dropdown-item" style="text-align: center; " type="button"
-                                data-id="${incomes.income_id}" onclick="deleteExpenses(${incomes.income_id})">Delete</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                        <h4>${incomes.date}</h4>
+                                    </div>
+                                    <div class="col">
+                                        <div class="dropdown d-flex justify-content-center pt-2">
+                                            <button
+                                                style="color: #80AC64; border:1px solid #80AC64; background: #F1F1F1;"
+                                                class="btn dropdown-toggle butdrop d-flex float-end" type="button"
+                                                id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></button>
+
+                                            <div style="background:#ECFAE2;border: 1px solid black;border-radius: 10px;"
+                                                class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <button style="border-bottom: 1px solid black; text-align: center;"
+                                                    class="dropdown-item" id="butEdit_${incomes.income_id}" type="button"
+                                                    >Edit
+                                                </button>
+                                                <button
+                                                class="dropdown-item" style="text-align: center;" type="button"
+                                                id="deleteButton_${incomes.income_id}">Delete</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
 
             `;
 
