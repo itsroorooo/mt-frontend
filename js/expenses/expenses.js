@@ -97,7 +97,7 @@ function saveEditExpenses(expensesId) {
 
                 const successMessage = document.getElementById('successMessage');
                 if (successMessage) {
-                    successMessage.textContent = 'Data changes succfully save.';
+                    successMessage.textContent = 'Data changes successfully save.';
                 }
 
                 $('#sucessModal').modal({
@@ -158,6 +158,21 @@ function deleteExpenses(expenses_id) {
         })
         .then(data => {
             console.log(data.message);
+            const successMessage = document.getElementById('successMessage');
+            if (successMessage) {
+                successMessage.textContent = 'Successfully Added!';
+            }
+
+            $('#sucessModal').modal({
+                backdrop: false,
+                show: true
+            });
+
+            $('#editModal').modal('hide');
+
+            setTimeout(() => {
+                $('#sucessModal').modal('hide');
+            }, 2000);
             loadUserExpenses();
         })
         .catch(error => {
