@@ -513,7 +513,7 @@ function loadUserIncomes() {
                 row.innerHTML = `
                 <div class="row rowAl pt-2">
                                     <div class="col text-center">
-                                        <h4>${incomes.type} ${incomes.income_id}</h4>
+                                        <h4>${incomes.type}</h4>
                                     </div>
                                     <div class="col grey text-center">
                                         <h4>&#8369;${incomes.amount}</h4>
