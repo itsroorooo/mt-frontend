@@ -13,7 +13,7 @@ logout.onclick = async () => {
     });
     if (response.ok) {
         localStorage.clear();
-        window.location.href = "/mt-frontend/index.html";
+        window.location.href = "/index.html";
 
     } else {
         const json = await response.json();
