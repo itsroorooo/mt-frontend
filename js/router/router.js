@@ -31,7 +31,7 @@ function setRouter() {
     }
 }
 
-const url = "https://70c4-216-247-48-37.ngrok-free.app/moneytracker-backend/public";
+const url = "http://moneytracker-backend.test";
 
 export { setRouter, url };
 

@@ -1,4 +1,4 @@
-import { url, setRouter } from "../router/router.js";
+import { setRouter, url } from "../router/router.js";
 
 setRouter();
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(json);
 
             
-            successMessage("Successfully Registered! Check your email for the verification link.");
+            successMessage("Successfully Registered!");
 
             registrationForm.reset();
 

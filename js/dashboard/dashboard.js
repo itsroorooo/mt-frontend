@@ -242,7 +242,7 @@ function saveEditExpenses(incomeId) {
                 });
             } else {
 
-                console.log('Data changes sully save.');
+                console.log('Data changes successfully save.');
 
                 const successMessage = document.getElementById('successMessage');
                 if (successMessage) {
@@ -258,6 +258,12 @@ function saveEditExpenses(incomeId) {
 
                 loadUserIncomes();
                 dailyIncome();
+                dailySpending();
+                dailySaving();
+                weeklyIncome();
+                weeklySpending();
+                weeklySaving();
+                
                 setTimeout(() => {
                     $('#sucessModal').modal('hide');
                 }, 2000);
@@ -324,7 +330,14 @@ function deleteExpenses(incomeId) {
                 setTimeout(() => {
                     $('#sucessModal').modal('hide');
                 }, 2000);
-        loadUserIncomes();
+                loadUserIncomes();
+                dailyIncome();
+                dailySpending();
+                dailySaving();
+                weeklyIncome();
+                weeklySpending();
+                weeklySaving();
+                
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
