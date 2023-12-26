@@ -31,7 +31,7 @@ function setRouter() {
     }
 }
 
-const url = "https://635a-216-247-55-156.ngrok-free.app/moneytracker-backend/public";
+const url = "https://b386-216-247-50-236.ngrok-free.app/moneytracker-backend/public";
 
 export { setRouter, url };
 
